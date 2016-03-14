@@ -6,7 +6,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/notman.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
     <script type="text/javascript" src="js/notman.js"></script>
   </head>
   <body ng-app="notman">
@@ -45,11 +45,83 @@
           </ul>
         </div>
       </nav>
+
+      <!--------------------------------------------------------------------->
+      <!----- This is the start of the content section ---------------------->
+      <!--------------------------------------------------------------------->
       <div class="container-fluid">
-        <div class="row">
-          <img src="images/hackthehouse-logo.jpg" class="img-responsive">
-        </div>
+        <img src="images/hackthehouse-logo.jpg" class="img-responsive">
+        <p> &nbsp; <!-- Perhaps a description here in future? --> </p>
+        <uib-tabset>
+          <!----- APIs tab ------------------------------------------------>
+          <uib-tab heading="APIs">
+            <h1> Unified API </h1>
+            <p> A unified API was proposed at the first hackathon and work is in progress... </p>
+            <h1> Partner APIs </h1>
+            <p> Click on the partners below for more information on their APIs </p>
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <uib-accordion>
+                  <uib-accordion-group heading="The Bubbles Company">
+                    Info coming soon
+                  </uib-accordion-group>
+                  <uib-accordion-group heading="DasBox">
+                    Info coming soon
+                  </uib-accordion-group>
+                  <uib-accordion-group heading="Distech Controls">
+                    Info coming soon
+                  </uib-accordion-group>
+                  <uib-accordion-group heading="mnubo">
+                    Info coming soon
+                  </uib-accordion-group>
+                </uib-accordion>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <uib-accordion>
+                  <uib-accordion-group heading="MySeat">
+                    Info coming soon
+                  </uib-accordion-group>
+                  <uib-accordion-group heading="reelyActive">
+                    <table class="table table-hover">
+                      <tr>
+                        <th> #HackTheHouse </th>
+                        <td> <a href="http://reelyactive.github.io/hackthehouse.html" target="_blank">Overview for #HackTheHouse</a> </td>
+                      </tr>
+                      <tr>
+                        <th> API Doc </th>
+                        <td> <a href="http://context.reelyactive.com/api.html" target="_blank">context.reelyactive.com/api.html</a> </td>
+                      </tr>
+                      <tr>
+                        <th> Contextual API </th>
+                        <td> <a href="http://www.hyperlocalcontext.com/contextat/directory/notman" target="_blank">www.hyperlocalcontext.com/contextat/directory/notman</a> </td>
+                      </tr>
+                      <tr>
+                        <th> Websockets API </th>
+                        <td> <a href="http://www.hyperlocalcontext.com/notman" target="_blank">www.hyperlocalcontext.com/notman</a> (Connect with socket.io) </td>
+                      </tr>
+                      <tr>
+                        <th> smartspac.es </th>
+                        <td> <a href="http://smartspac.es/notman" target="_blank">smartspac.es/notman</a> </td>
+                      </tr>
+                      <tr>
+                        <th> reelyApp </th>
+                        <td> <a href="https://play.google.com/store/apps/details?id=com.reelyactive.reelyapp" target="_blank">Android</a> | iOS </td>
+                      </tr>
+                    </table>
+                  </uib-accordion-group>
+                  <uib-accordion-group heading="Ubios">
+                    Info coming soon
+                  </uib-accordion-group>
+                </uib-accordion>
+              </div>
+            </div>
+          </uib-tab>
+        </uib-tabset>
       </div>
+      <!--------------------------------------------------------------------->
+      <!----- This is the end of the content section ------------------------>
+      <!--------------------------------------------------------------------->
+
       <footer class="footer">
         <p> #HackTheHouse </p>
       </footer>
