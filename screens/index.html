@@ -1,0 +1,54 @@
+<html>
+<head>
+
+<title>Notman Screens</title>
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+var screens = {
+   'entrance': 'http://notman-entrance-dashboard.netlify.com/?location=entrance',
+   'campus-1': 'http://notman-entrance-dashboard.netlify.com/?location=campus-1',
+   'campus-2': 'http://notman-entrance-dashboard.netlify.com/?location=campus-2',
+   'cafe': 'https://maison-notman-house.github.io/notman-reelyactive-dashboard/',
+   'stairwell': 'https://maison-notman-house.github.io/notman-stairwell-dashboard/',
+   'ss': 'https://maison-notman-house.github.io/notman-ss-dashboard/'
+}
+
+$(document).ready(function () {
+   var urlParams = new URLSearchParams(window.location.search);
+   var screen = urlParams.get('loc');
+   var href;
+   
+   if (screen && screen.trim().length > 0) {
+       href = screens[screen];
+   }
+   
+   if (href) {
+       window.location = href;
+   } else {
+       var keys = Object.keys(screens);
+       var i=0;
+       var html = '';
+       for (i=0; i<keys.length; i++) {
+          html += '<li><a href="' + './?loc=' + keys[i] + '">' + keys[i] + '</a></li>';
+       }
+       $('#locations').html(html);
+   }
+});
+
+</script>
+
+</head>
+<body>
+<h1>Notman Screens</h1>
+<p>Please pass a 'loc' parameter with one of the following values:</p>
+<ul id="locations">
+
+</ul>
+</body>
+</html>
